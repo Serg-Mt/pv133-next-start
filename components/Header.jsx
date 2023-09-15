@@ -4,8 +4,8 @@ import style from './Header.module.css';
 const
   pages = [
     { href: '/', title: 'Home' },
-    { href: '/about', title: 'About' },
-    { href: '/info', title: 'Info' }
+    { href: '/test-users', title: 'test fetch' },
+    { href: '/users', title: 'Users' }
   ];
 
 export default function Header() {
