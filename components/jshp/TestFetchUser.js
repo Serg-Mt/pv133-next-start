@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import FetchUser from './FetchUser';
-import FetchUserByClick from './FetchUserbyClick';
+import FetchUserByClick from './FetchUserByClick';
 
 export default function TestFetchUser() {
   const [id, setId] = useState(1);
