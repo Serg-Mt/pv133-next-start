@@ -1,4 +1,6 @@
-export default function Button({ onClick, children }) {
+import { memo } from 'react';
+
+export default memo(function Button({ onClick, children }) {
   console.debug('render Button');
-  return <button onClick={onClick}>{children}</button>
-}
+  return <button onClick={onClick}>{children}</button>;
+});

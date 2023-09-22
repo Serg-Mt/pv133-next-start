@@ -7,6 +7,6 @@ export default function List({ list, delItem, toggleCheckbox }) {
     <ol>
       {list.map(item => <Item key={item.id} item={item} delItem={delItem} toggleCheckbox={toggleCheckbox} />)}
     </ol>
-  </fieldset>
+  </fieldset>;
 
 }

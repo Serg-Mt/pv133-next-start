@@ -22,5 +22,5 @@ export default function FetchUserByClick({ id }) {
     <button onClick={onClick}>fetch user #{id}</button>
     {error && <h2 style={{ color: 'red' }}>{error.toString()}</h2>}
     {user && <OneUser user={user} />}
-  </>
+  </>;
 }

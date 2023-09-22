@@ -16,5 +16,5 @@ export default function Header() {
         {pages.map(({href,title})=><li key={href}><Link href={href}>{title}</Link></li>)}
       </ul>
     </nav>
-  </header>
+  </header>;
 }

@@ -9,5 +9,5 @@ export async function getStaticProps() {
     await (await fetch('https://jsonplaceholder.typicode.com/users/1')).json(),
     await (await fetch('https://jsonplaceholder.typicode.com/users/2')).json(),
   ];
-  return { props: { propsUsers } }
+  return { props: { propsUsers } };
 }

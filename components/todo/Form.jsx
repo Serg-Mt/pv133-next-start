@@ -1,14 +1,16 @@
-import { useState } from 'react';
+import { useState, memo, useCallback, useRef } from 'react';
 import Button from './Button';
 
-export default function Form({ addItem }) {
+export default memo(function Form({ addItem }) {
   const
-    [value, setValue] = useState('-');
+    [value, setValue] = useState('-'),
+    ref = useRef(''),
+    onClick = useCallback(() => { setValue(''); addItem(ref.current); }, [addItem]);
+  ref.current = value;
   console.debug('render Form');
   return <fieldset>
     <legend>Form</legend>
     <input value={value} onInput={evt => setValue(evt.target.value)} />
-    <Button onClick={() => { setValue(''); addItem(value); }}>➕Add</Button>
-  </fieldset>
-
-}
+    <Button onClick={onClick}>➕Add</Button>
+  </fieldset>;
+});

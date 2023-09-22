@@ -31,7 +31,7 @@ export default function FetchUser({ id }) {
   //   },
   //   []
   // );
-  if (error) return <h2 style={{ color: 'red' }}>{error.toString()}</h2>
+  if (error) return <h2 style={{ color: 'red' }}>{error.toString()}</h2>;
   if (user) return <OneUser user={user} />;
   return <Spinner />;
 }
