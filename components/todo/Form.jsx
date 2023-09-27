@@ -7,6 +7,7 @@ export default memo(function Form({ addItem }) {
     ref = useRef(''),
     onClick = useCallback(() => { setValue(''); addItem(ref.current); }, [addItem]);
   ref.current = value;
+  
   console.debug('render Form');
   return <fieldset>
     <legend>Form</legend>
