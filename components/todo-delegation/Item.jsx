@@ -5,15 +5,14 @@ export function createItem(text) {
 
 }
 
-
-export default memo(function Item({ item, delItem, toggleCheckbox }) {
+export default memo(function Item({ item  }) {
   console.debug('render Item ', item.id);
   return <li>
-    <label>
-      <input type="checkbox" value={item.checked} onChange={() => toggleCheckbox(item.id)} />
+    <label data-id={item.id} data-action="toggle">
+      <input type="checkbox" value={item.checked} />
       <span>{item.text}</span>
     </label>
-    <button onClick={() => delItem(item.id)}>❌Delete</button>
+    <button data-id={item.id} data-action="delete">❌Delete</button>
     {item.checked ? '❎' : '⬜'}
   </li>;
 });
